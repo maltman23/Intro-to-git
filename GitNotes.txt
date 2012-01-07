@@ -36,3 +36,39 @@ We go into the new branch:
 
 can do all 3 above commands in a single command:
      git checkout 75d94622e2d2c4 -b retrospection
+
+check out "master" branch (to get ready to merge with "retrospection" branch):
+     git checkout master
+
+merge "retrospection" branch into "master" branch
+     git merge retrospection
+this caused a merge conflict -- I had to remove the tags that git put into the resultant file.
+
+then commit the result (to get the merged file into the master branch):
+     git commit -am "resolve merge conflict between retrospection into master"
+
+to see all the commits:
+     git log
+
+to get a clone of an entire git repository:
+     git clone <path/name>   (can be local, or SSH, or http, or whatever)
+
+Dan did a git clone of his rgb firmware on his USB drive, in a directory called "rgbled"
+I changed directory to:  C:\Projects\RGBwaves Kit\firmware\Dan\DanGit
+and then, to get a clone of that on my computer:
+     git clone d:\rgbled
+
+Can fetch commit objects from a branch of a remote repository:
+     git fetch <path/name>
+This does not merge with your local branch, which creates a new branch called "remotes"
+
+To merge, can do a normal merge (to merge into your local branch, such as the master branch)
+     git checkout master
+
+Alternatively to the above, can do a "pull" to fetch and merge (if possible) in one command:
+     git pull <path/name>
+(if the merge has conflicts, it will only do a fetch)
+
+"push" works similar to "pull" (but will not destroy content in the working directory -- it will not do anything if it will destroy data).
+Can create a "bare" repository on a remote (or local) server, which acts as a central respository.
+A bare repository has no working directory.
