@@ -5,3 +5,16 @@ Create a  new repository:
   in the directory with the file(s) you want to comit,
      git init
 
+Adding a file to the "staging area":
+     git add GitNotes.txt
+
+To commit staging area to a "commit object":
+     git commit -m "commit msg"
+
+To get status (to show what is in staging area -- i.e., what will be committed when type 'commit', and untracked changes):
+     git status
+
+Look at commit:
+     git log -p
+     (the 'p' shows the changes between current to previous commits)
+
