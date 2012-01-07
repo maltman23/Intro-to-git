@@ -27,3 +27,12 @@ or
      git diff --color-words      shows only words that are different (red: removed  green: added)
 (need to type 'q' to get out of pager for "diff" and "log" and other commands that use the pager)
 
+We just checked out branch 75d94622e2d2c4, and create a new branch called "retrospection":
+     git checkout 75d94622e2d2c4
+     git branch retrospection
+
+We go into the new branch:
+     git checkout retrospection
+
+can do all 3 above commands in a single command:
+     git checkout 75d94622e2d2c4 -b retrospection
