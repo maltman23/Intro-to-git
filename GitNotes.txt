@@ -2,7 +2,7 @@ Git notes
 Tutorial with Dan -- 7-Jan-2012
 
 Create a  new repository:
-  in the directory with the file(s) you want to comit,
+  in the directory with the file(s) you want to commit,
      git init
 
 Adding a file to the "staging area":
@@ -17,4 +17,13 @@ To get status (to show what is in staging area -- i.e., what will be committed w
 Look at commit:
      git log -p
      (the 'p' shows the changes between current to previous commits)
+
+to stage and commit in one command:
+     git commit -am "this will stage and commit in one cmd"
+
+to see differences between working directory and most recent commit (or staging, if it exists):
+     git diff                    shows lines that are different (red: removed  green: added)
+or
+     git diff --color-words      shows only words that are different (red: removed  green: added)
+(need to type 'q' to get out of pager for "diff" and "log" and other commands that use the pager)
 
