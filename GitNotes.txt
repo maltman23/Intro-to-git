@@ -72,3 +72,19 @@ Alternatively to the above, can do a "pull" to fetch and merge (if possible) in 
 "push" works similar to "pull" (but will not destroy content in the working directory -- it will not do anything if it will destroy data).
 Can create a "bare" repository on a remote (or local) server, which acts as a central respository.
 A bare repository has no working directory.
+
+As an example of using "push", I created "tempdir", to emulate a remote server, then cloned the git repository there.
+then reset it to get rid of some commits.
+Then use the "push" command:
+     git push tempdir master:master
+
+Create a github account, and then put this tutorial there.
+     git push
+
+
+to see a graphical representation (in all text), with colors, showing branch names and commit IDs:
+     git log --graph --decorate --pretty=oneline --all
+
+
+to see a list of files that are committed:
+     git ls-files
