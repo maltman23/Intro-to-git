@@ -1,0 +1,7 @@
+Git notes
+Tutorial with Dan -- 7-Jan-2012
+
+Create a  new repository:
+  in the directory with the file(s) you want to comit,
+     git init
+
